@@ -1,0 +1,2274 @@
+@font-face 
+{
+    font-family: Inter-Black;
+    src: url(../inter-font-family/Inter-Black.otf);
+}
+@font-face 
+{
+    font-family: Inter-Bold;
+    src: url(../inter-font-family/Inter-Bold.otf);
+}
+@font-face 
+{
+    font-family: Inter-Extra-Bold;
+    src: url(../inter-font-family/Inter-ExtraBold.otf);
+}
+@font-face 
+{
+    font-family: Inter-Light;
+    src: url(../inter-font-family/Inter-Light-BETA.otf);
+}
+@font-face 
+{
+    font-family: Inter-Medium;
+    src: url(../inter-font-family/Inter-Medium.otf);
+}
+@font-face 
+{
+    font-family: Inter-Regular;
+    src: url(../inter-font-family/Inter-Regular.otf);
+    }
+@font-face 
+{
+    font-family: Inter-extra-light;
+    src: url(../inter-font-family/Inter-ExtraLight-BETA.otf);
+}
+@font-face 
+{
+    font-family: Inter-Bold-italic;
+    src: url(../inter-font-family/Inter-BoldItalic.otf);
+}
+@font-face 
+{
+    font-family: Inter-ExtraBold-italic;
+    src: url(../inter-font-family/Inter-ExtraBoldItalic.otf);
+}
+
+p
+{
+    margin-bottom: 0px;
+}
+
+
+/*Mobile menu style*/
+.wrapper{
+    display: none;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    height: 105%;
+    width: 100%;
+    background: #000;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.6s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /* left: 20px; */
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 13s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    color: #fff;
+  }
+  #active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px !important;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 10s ease;
+  }
+  .navbar-nav li a
+  {
+    padding: 6px 22px !important;
+  }
+  .navbar-nav li a
+  {
+    --color: #F26222;
+    --hover: #F26222;
+    color: var(--color);
+    transition: 0.8s;
+  }
+  .navbar-nav li a:hover
+  {
+    border-color: var(--hover);
+    color: white;
+    box-shadow: inset 0 0 0 2em var(--hover);
+    border-radius: 25px;
+    padding: 6px 20px !important;
+  }
+  /* .wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: #fff;
+     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 0.3s linear infinite;
+    transition: transform 0.3s ease;
+  } */
+  .wrapper ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .wrapper ul li a:hover{
+    color: #fff;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    color: #202020;
+  }
+  .content .title{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .content p{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  @keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+
+/*Navigation Bar Styles Start*/
+.navbar
+{
+    padding: 1% 5% 0% 6%;
+    z-index: 999;
+}
+.navbar .container-fluid
+{
+    align-items: flex-start;
+}
+.navbar .navbar-collapse
+{
+    align-items: flex-start;
+}
+.navbar .navbar-brand img
+{
+    width: 15vw;
+}
+.navbar-nav li a
+{
+    color: #6E6E6E;
+    font-family: Inter-Regular;
+    font-size: 1vw;
+}
+/*Navigation Bar Styles end*/
+
+/*Home page Slider*/
+.home-page-slider
+{
+    background-image: url(../images/home-page-images/home-slider-background-half.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 45%;
+    width: 100%;
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+}
+
+
+.home-page-slider .carousel-inner .carousel-item img
+{
+    width: 36%;
+    margin-bottom: 50px;
+}
+.home-page-slider .carousel {
+    position: absolute !important;
+    width: 100%;
+    bottom: 0;
+}
+.carousel-indicators [data-bs-target]
+{
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 25px;
+    border-top: none !important;
+    border-bottom: none !important;
+    margin-right: 8px;
+    margin-left: 8px;
+    opacity: 1 !important;
+}
+
+.carousel-control-next, .carousel-control-prev
+{
+    opacity: 1 !important;
+}
+
+
+.carousel-button-wraper
+{
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+.slider-producr-detail 
+{
+    position: absolute;
+    top: 0;
+    left: 40%; 
+}
+
+.slider-producr-detail p
+{
+    color: black;
+    font-family: Inter-Bold;
+    text-align: left !important;
+    font-size: 1.8vw;
+}
+.slider-producr-detail h1,.slider-producr-detail h2
+{
+    /* color: #DE1111; */
+    background: -webkit-linear-gradient(left,#DE1111, #fb7800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    text-align: left !important;
+    font-size: 4.2vw;
+    font-family: Inter-Bold-italic;
+}
+.slider-producr-detail h2
+{
+    margin-bottom: 100px;
+    margin-top: -2vh;
+}
+.slider-producr-detail a
+{
+    background: -webkit-linear-gradient(left,#F9B90E, #DE1111);
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 14px 30px;
+    font-family: Inter-Medium;
+    font-size: 1.2vw;
+}
+.home-slider-product-name
+{
+    position: absolute;
+    bottom: 1px;
+    right: 2%;
+    margin-bottom: 0px !important;
+    width: 24vw;
+    height: 14vh;
+}
+.home-slider-product-name p
+{
+    display: flex;
+    height: 100%;
+}
+
+.home-slider-product-name span:nth-child(1)
+{
+    padding: 15px 15px 15px 15px;
+    background-color:white;
+    color: #6E6E6E;
+    font-family: Inter-Bold;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+}
+.home-slider-product-name span:nth-child(2)
+{
+    padding: 15px 22px;
+    background-color: #F26222;
+    color: white;
+    font-family: Inter-Bold;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+}
+/* .homepage-carousel.carousel-inner,.homepage-carousel .carousel-item
+{
+    position: unset !important;
+} */
+/*Home page slider*/
+
+/*Who we are section styles*/
+.whoweare
+{
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+.whoweare-container
+{
+    border-bottom: 1px solid #707070;
+    margin: 0px 2%;
+    padding-bottom: 4%;
+    padding-left: 5%;
+}
+.whoweare .col-md-4
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rtx-logo-wraper img
+{
+    width: 85%;
+}
+.whoweare-content
+{
+    padding-right: 16%;
+    padding-top: 5%;
+}
+.whoweare-content p:nth-child(1)
+{
+    font-family: 'Inter-Extra-Bold';
+    font-size: 2.6vw;
+    margin-bottom: 15px;
+    color: #474747;
+}
+.whoweare-content p:nth-child(2)
+{
+    color: #474747;
+}
+.whoweare-content p:nth-child(2),.lubricant-inner-wraper p
+{
+    font-family: 'Inter-Regular';
+    font-size: 1.4vw;
+    margin-bottom: 30px;
+}
+.whoweare-content a,.single-product-wraper .product-packing
+{
+    text-decoration: none;
+    font-family: 'Inter-Bold';
+    border: 1px dashed #707070;
+    padding: 5px 55px 5px 10px;
+    font-size: 1.1vw;
+    border-radius: 3px;
+    color: #464646;
+}
+/*Who we are section styles ends*/
+
+
+/*Lubricant Engineering Section*/
+.lubricant-engineering-container
+{
+    margin-left: 2%;
+}
+
+.lubricant-inner-wraper .lubricant-content img
+{
+    width: 16%;
+}
+.lubricant-inner-wraper
+{
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+.lubricant-content .lubricant-head
+{
+    font-family: 'Inter-Bold';
+    font-size: 2.4vw;
+    margin: 20px 0px;
+    line-height: 1;
+}
+.lubricant-slider-col
+{
+    padding-right: 0px !important;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.slick-slider-wraper2 .slider img
+{
+    width: 100%;
+}
+.slider-news1:hover.slider-news1 a
+{
+    outline:1px solid white;
+    padding: 8px;
+    background-color: #000000ba;
+}
+.slick-next 
+{
+    right: 0px !important;
+}
+.slider-news1
+{
+    position: relative;
+}
+.slick-slider-wraper2 a
+{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: white;
+    font-family: 'Inter-Bold';
+    font-size: 1.2vw;
+    margin-bottom: 0px;
+    width: 90%;
+    text-decoration: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slider-news1 .product-link img
+{
+    width: 4%;
+    height: 4%;
+}
+.lubricant-inner-wraper p
+{
+    padding-right: 90px;
+}
+.slick-slider-wraper2
+{
+    width: 120%;
+}
+
+.lubricant-slider
+{
+    width: 100%;
+    overflow-x: hidden;
+}
+.germen-tech-col
+{
+    padding-right: 0px !important;
+}
+.germen-tech-wraper 
+{
+    text-align: end;
+    padding-right: 2%;
+}
+.germen-tech-wraper img,.germen-tech-wraper p
+{
+    display: inline-block;
+}
+.germen-tech-wraper p
+{
+    margin-bottom: 0px !important;
+    font-family: 'Inter-Bold';
+    font-size: 1.2vw;
+    margin-left: 5px;
+    padding-right: 0px;
+}
+.germen-tech-wraper
+{
+    padding-bottom: 3%;
+}
+.germen-inner,.single-product-wraper .germen-inner
+{
+    display: inline-block;
+    border: 1px dashed #707070;
+    border-radius: 3px;
+    padding: 0px 20px 4px 6px;
+}
+
+/*Lubricant Engineering Section End*/
+
+/*Scratch and win*/
+
+.scratch.new-deals-wraper
+{
+    display:initial;
+}
+.scratch-win-banner img
+{
+    width: 100%;
+}
+.scratch.new-deals-wraper .deals-offer-head
+{
+    padding-bottom: 3%;
+}
+.deals-offer-container
+{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+    border-top: 1px solid #707070;
+}
+.deals-offers .deals-offer-head p
+{
+    font-family: 'Inter-Bold';
+    font-size: 2.1vw;
+    margin-bottom: 15px;
+    color: #7B7B7B;
+}
+.deals-slider-container
+{
+    margin-left: 2%;
+    padding-left: 4%;
+}
+.deals-col
+{
+    padding-right: 0px !important;
+}
+.deals-slider-container .slick-slider-wraper2
+{
+    width: 112%;
+}
+.deals-slider-container .lubricant-slider
+{
+    width: 100%;
+    overflow-x: hidden;
+}
+.deals-slider-container .slick-slider-wraper2 .slider img {
+    width: 95%;
+}
+.deals-slider-container
+{
+    padding-bottom: 3%;
+}
+
+.new-deals-wraper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.see-all-btn a
+{
+    text-decoration: none;
+    font-family: 'Inter-Bold';
+    border: 1px dashed #707070;
+    padding: 5px 30px 5px 25px;
+    font-size: 1.1vw;
+    border-radius: 3px;
+    color: #464646;
+    text-transform: capitalize;
+}
+.deals-offer-images img
+{
+    width: 100%;
+    padding: 5px;
+}
+
+
+
+/*Footer styles start*/
+.footer
+{
+    background-color: #3B3B3B;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 6%;
+}
+.footer-col
+{
+    padding-right: 0px !important;
+}
+.footer-wraper ul,.footer-bottom-wraper ul
+{
+    list-style-type: none;
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+.footer-list-wraper .list-single
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+.footer-wraper .footer-head
+{
+    color: white;
+    font-family: 'Inter-Bold';
+    text-transform: uppercase;
+    margin-bottom: 3%;
+    font-size: 2.5vw;
+    text-decoration: none;
+}
+.footer-wraper ul li
+{
+    margin: 5px 0px;
+}
+.footer-wraper ul li a
+{
+    text-transform: capitalize;
+}
+.footer-wraper ul li a,.footer-bottom-wraper ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-family: Inter-extra-light;
+    font-size: 1.4vw;
+}
+.footer-bottom-wraper ul li
+{
+    display: inline-block;
+    margin: 0px 50px 0px 0px;
+}
+.footer-bottom-wraper ul li a
+{
+    font-family: Inter-Regular;
+    font-size: 1.8vw;
+}
+.footer-bottom-wraper ul li a img
+{
+    width: 2.5%;
+}
+.footer-bottom-wraper
+{
+    border-top: 1px solid white;
+    background-color: #3B3B3B;
+}
+.footer-bootom-container
+{
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 6%;
+}
+
+
+/*Product page design*/
+.product-page-slider
+{
+    background-image: url(../images/products/product-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48vh;
+}
+.product-page-slider .navbar-nav li a {
+    color:white;
+}
+.breadcrumb
+{
+    background-color: #5C5C5C;
+    border: 1px solid white;
+    padding: 10px 0px;
+    padding-left:2%;
+    margin-bottom: 0px !important;
+}
+.breadcrumb ul
+{
+    margin-bottom: 0px !important;
+
+}
+.breadcrumb ul li
+{
+    display: inline-block;
+}
+.breadcrumb ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8vw;
+}
+.breadcrumb ul li+li:before {
+    padding: 2px 0px 2px 4px;
+    color: white;
+    content: "/\00a0";
+    font-size: 1.2vw;
+}
+.product-slider-image
+{
+    background-image: url(../images/products/product-slider.webp);
+}
+.product-slider-image,.bike-slider-image,.cars-slider-image,.diesel-slider-image,.single-bike-slider-image,
+.team-slider-image,.single-car-slider-image,.single-diesel-slider-image,.hydraulic-slider-image,.gear-slider-image,.atf-slider-image,
+.single-hydraulic-slider-image,.single-gear-slider-image,.single-atf-slider-image
+{
+    height: 48vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* .product-list
+{
+    padding: 2% 0% 0% 0%;
+} */
+/* .product-list .product-head p:nth-child(1):after {
+    padding: 2px 0px 2px 8px;
+    color: #7B7B7B;
+    content: "/\00a0";
+} */
+.product-list .product-head p,.core-values-head p
+{
+    display: inline-block;
+    color: #7B7B7B;
+    font-size: 1.3vw;
+    font-family: Inter-Bold;
+    margin-bottom: 0px !important;
+    line-height: 1;
+}
+.product-list .product-head p:nth-child(2)
+{
+    font-family: Inter-Bold;
+}
+.product-list-container
+{
+    margin: 0px 2%;
+}
+.product-head
+{
+    padding-left: 2rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.product-head,.core-values-head
+{
+    border-bottom: 2px solid #707070;
+}
+.core-values-head
+{
+    padding: 2% 5%;
+}
+.single-product
+{
+    display: flex;
+}
+.product-list-detail
+{
+    padding: 4% 6%;
+}
+.conent-col
+{
+    flex-direction: column;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+.conent-col p
+{
+    font-family: 'Inter-Extra-Bold';
+    line-height: 1;
+}
+.conent-col p:nth-child(1)
+{
+    color: #919191;
+    font-size: 1.6vw; 
+}
+.conent-col p:nth-child(2)
+{
+    font-size: 3vw;
+}
+.conent-col p:nth-child(3)
+{
+    font-size: 1.8vw;
+    color: #919191;
+}
+.conent-col a
+{
+    text-decoration: none;
+    color: #7E7E7E;
+    border: 1px solid #7E7E7E ;
+    border-radius: 12px;
+    margin-top: 25px;
+    display: inline-block;
+    font-family: Inter-Bold-italic;
+    padding: 8px 30px 8px 12px;
+    font-size: 1vw;
+}
+
+.petrol-list .product-list-detail img,.Diesel-list .product-list-detail img,.bike-list .img-col img
+{
+    width: 100%;
+}
+.petrol-list .img-col, .Diesel-list .img-col,.bike-list .img-col
+{
+    width: 38%;
+}
+.gear-product4,.gear-product5,.petrol-item4,.petrol-item5,.petrol-item6,.diesel-item4,.diesel-item5,.diesel-item6,.diesel-item7
+,.diesel-item8,.diesel-item9,.diesel-item10,.single-product.bike-product4
+{
+    margin-top: 25%;
+}
+
+
+/*bike page*/
+.bike-slider-image
+{
+    background-image: url(../images/products/bike/bike-slider.webp);
+}
+
+/*cars page*/
+.cars-slider-image
+{
+    background-image: url(../images/products/petrol/luca-david-HjXbVnnITvE-unsplash.webp);
+}
+
+/*hydraulic page*/
+.hydraulic-slider-image
+{
+    background-image: url(../images/products/hyd/Hydraulic-System.webp);
+}
+
+/*hydraulic page*/
+.gear-slider-image
+{
+    background-image: url(../images/products/gear-oil/gear-oil-slider.webp);
+}
+
+.atf-slider-image
+{
+    background-image: url(../images/products/AFT/automatic-transmission-car.webp);
+    background-size: 100% 101%;
+}
+
+
+/*diesel page*/
+.diesel-slider-image
+{
+    background-image: url(../images/products/diesel/diesel-slider.webp);
+}
+
+/*Team page*/
+.team-slider-image
+{
+    background-image: url(../images/team/team-slider.webp);
+    height: 22vh;
+}
+.our-team
+{
+    margin: 0px 2%;
+}
+.single-product-wraper
+{
+    position: relative;
+}
+.team-container
+{
+    padding: 4% 6%;
+}
+.team-content-wraper .team-member-designation,.product-type
+{
+    font-family: Inter-Bold;
+    font-size: 1.8vw;
+    color: #919191;
+}
+.team-content-wraper .team-member-designation span
+{
+    color: #D72C10;
+}
+/* .team-row1 .team-content-wraper .team-member-designation span::before
+{
+    content: '-';
+    padding: 0px 4px;
+} */
+.team-content-wraper .team-member-name
+{
+    font-family: Inter-Bold-italic;
+    font-size: 4.5vw;
+    margin-left: -3px;
+    line-height: 0.8;
+}
+.team-content-wraper .team-member-detail
+{
+    font-family: Inter-Regular;
+    font-size: 1.2vw;
+    margin-top: 40px;
+}
+.team-row1
+{
+    border-bottom: 1px solid #707070;
+    padding-bottom: 4%;
+}
+.team-row2,.team-row3
+{
+    border-bottom: 1px solid #707070;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+.team-row3
+{
+    border-bottom: none !important;
+    padding-bottom: 0px;
+}
+
+/*single bike product*/
+.single-bike-slider-image
+{
+    background-image: url(../images/products/bike/bike-single-product.webp);
+    height: 22vh;
+}
+.single-product-wraper .team-content-wraper .team-member-name
+{
+    margin-bottom: 0px !important;
+    font-family: Inter-Extra-Bold;
+}
+.single-product-wraper .team-content-wraper .team-member-designation
+{
+    font-family: Inter-Extra-Bold;
+    font-size: 2.8vw;
+}
+.product-type
+{
+    font-family: Inter-ExtraBold-italic;
+    font-size: 3.5vw;
+    margin-bottom: -25px;
+}
+.product-details
+{
+    margin-top: 40px;
+}
+.product-details .detail-parg1
+{
+    font-family: 'Inter-Medium';
+    margin: 10px 0px 20px 0px;
+    font-size: 1.4vw;
+}
+.product-details .detail-parg2
+{
+    font-family: Inter-Light;
+    margin-bottom: 10px;
+    font-size: 1.4vw;
+}
+.product-details .detail-parg3
+{
+    font-family: Inter-Light;
+    font-size: 1.4vw;
+}
+.product-details .performance-feature
+{
+    font-family: Inter-Medium;
+    margin: 50px 0px 20px 0px;
+    font-size: 1.4vw;
+}
+
+.single-product-wraper .car-image-wraper img,
+.single-product-wraper .diesel-image-wraper img
+{
+    width: 80%;
+}
+
+.single-product-wraper  .gear-oil-product img,.single-product-wraper .atf-image-wraper img
+{
+    width: 65%;
+}
+.atf-image-wraper
+.single-product-wraper  .gear-oil-product .carousel img
+{
+    width: 80%;
+}
+
+.single-product-wraper  .bike-image-wraper img
+{
+    width: 50%;
+}
+.car20-50-img
+{
+    width: 65% !important;
+}
+.single-product-wraper .team-content-wraper
+{
+    padding-left: 75px;
+    padding-right: 55px;
+}
+.single-product-wraper .germen-inner 
+{
+    padding: 2px 20px 4px 6px;
+}
+.single-product-wraper .germen-inner img
+{
+    width: auto;
+}
+.single-product-wraper  .germen-tech-wraper
+{
+    text-align: left;
+    display: inline-block;
+}
+.single-product-wraper .germen-tech-wraper p
+{
+    font-size: 1vw;
+}
+.product-packing-wraper
+{
+    display: inline-block;
+}
+.single-product-wraper .product-packing
+{   font-family: Inter-Regular;
+    padding: 4px 24px 8px 10px;
+}
+.team-image-wraper
+{
+    text-align: center;
+}
+.product-germen-wraper
+{
+    text-align: left;
+    margin: 25px 0px 15px 0px;
+}
+.team-image-wraper #demo
+{
+    margin-bottom: 50px;
+}
+.team-image-wraper .carousel-indicators
+{
+    bottom: -40px;
+}
+.carousel-indicators [data-bs-target]
+{
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    
+}
+.carousel-indicators button.active
+{
+    background-color: #7A7A7A !important;
+}
+.product-specification-wraper
+{
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.product-specification
+{
+    text-decoration: none;
+    color: #717171;
+    font-family: Inter-Medium;
+    font-size: 1.4vw;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    padding: 16px 50px 16px 20px;
+    cursor: pointer;
+}
+.specification
+{
+    text-align: left;
+}
+
+.head-table-row
+{
+    font-weight: bold;
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+.popup .popup__content {
+    z-index: 999;
+    width: 40%;
+    overflow: auto;
+    padding: 50px;
+    background: white;
+    color: black;
+    position: relative;
+    top: 32%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+.popup .popup__content .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    display: block;
+}
+.popup .popup__content .close span {
+    cursor: pointer;
+    position: fixed;
+    width: 20px;
+    height: 3px;
+    background: #099ccc;
+}
+.popup .popup__content .close span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.popup .popup__content .close span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+
+.product-specification img
+{
+    width: 6% !important;
+    margin-right: 15px;
+}
+.product-details ul
+{
+    list-style-image: url(../images/products/bike/Icon\ feather-arrow-down-right.webp);
+}
+.product-details ul li
+{
+    padding-left: 16px;
+    font-family: Inter-Regular;
+    font-size: 1.1vw;
+}
+
+.releates-products .team-row2
+{
+    border-bottom: none;
+}
+.releated-products-head
+{
+    font-family: Inter-Regular;
+    font-size: 1.4vw;
+    color: #7B7B7B;
+    padding-bottom: 4%;
+}
+
+/*single car product page*/
+.single-car-slider-image
+{
+    height: 22vh;
+    background-image: url(../images/products/petrol/single-car-slider.webp);
+}
+.protection-environment
+{
+    position: relative;
+    margin-top: 60px;
+
+}
+.pretection-inner
+{
+    border: 1px solid #707070;
+    padding: 8px 15px;
+}
+.card-body p
+{
+    font-family: Inter-Regular;
+    font-size: 1vw;
+}
+.protection-environment-wraper #demo,.protection-environment-wraper #demo1
+{
+    margin-top: 5px;
+}
+.protection-environment a
+{
+    display: inline-block;
+    font-family: Inter-Medium;
+    font-size: 1vw;
+    color: black;
+    text-decoration: none;
+}
+.protection-environment a:nth-child(2)::before
+{
+    content: '|';
+    padding: 0px 8px 0px 4px;
+    font-family: Inter-Light;
+}
+.protection-environment .pretection-inner p
+{
+    position: absolute;
+    right: 18px;
+    top: 14px;
+}
+.car-related .img-col
+{
+    width: 50%;
+}
+.car-related .img-col img
+{
+    width: 100%;
+}
+
+/*Diesel single product*/
+.product-type span,.diesel-turbo
+{
+    color: #FF0000 !important;
+}
+.conent-col p:nth-child(4)
+{
+    color: #919191;
+    font-size: 1.4vw;
+    font-family: 'Inter-Extra-Bold';
+    font-size: 1.2vw;
+    margin-top: 5px;
+}
+.single-diesel-slider-image
+{
+    background-image: url(../images/products/diesel/diesel-slider.webp);
+    height: 22vh;
+}
+.diesel-related .img-col
+{
+    width: 50%;
+}
+.diesel-related .img-col img
+{
+    width: 100%;
+}
+
+/*single hydraulic product*/
+.single-hydraulic-slider-image
+{
+    background-image: url(../images/products/hyd/Hydraulic-System.webp);
+    height: 22vh;
+}
+
+/*single gear product*/
+.single-gear-slider-image
+{
+    background-image: url(../images/products/gear-oil/gear-oil-slider.webp);
+    height: 22vh;
+}
+
+/*single atf product*/
+.single-atf-slider-image
+{
+    background-image: url(../images/products/AFT/automatic-transmission-car.webp);
+    height: 22vh;
+}
+
+
+/*Core values page*/
+.core-values-detail
+{
+    padding: 4% 5%;
+}
+.core-values-col1 p,.core-values-col2 p
+{
+    font-size: 1.2vw;
+}
+.core-values-col1 p:nth-child(1)
+{
+    font-family: Inter-Regular;
+}
+.core-values-col1 p:nth-child(2)
+{
+    font-family: Inter-Bold;
+    margin: 20px 0px;
+}
+.core-values-col1 p:nth-child(3),.core-values-col1 p:nth-child(5),.core-values-col1 p:nth-child(7),.core-values-col1 p:nth-child(9),
+.core-values-col2 p:nth-child(1),.core-values-col2 p:nth-child(3),.core-values-col2 p:nth-child(5),.core-values-col2 p:nth-child(7)
+,.core-values-col2 p:nth-child(9)
+{
+    font-family: Inter-Bold;
+}
+.core-values-col1 p:nth-child(5),.core-values-col1 p:nth-child(7),.core-values-col1 p:nth-child(9),
+.core-values-col2 p:nth-child(3),.core-values-col2 p:nth-child(5),.core-values-col2 p:nth-child(7)
+,.core-values-col2 p:nth-child(9)
+
+{
+    margin-top: 15px;
+}
+
+.core-values-col1
+{
+    padding-right: 25px;
+}
+.core-values-col2
+{
+    padding-left: 25px;
+}
+
+/*single gear oil page*/
+.gear-related .img-col
+{
+    width: 38%;
+}
+.gear-related .img-col img
+{
+    width: 100%;
+}
+.gear-related .conent-col
+{
+    margin-bottom: 58px;
+}
+
+/*About us page*/
+.about-us-wraper
+{
+    padding-left: 6%;
+}
+.ceo-regards p
+{
+    color: #7B7B7B;
+    font-size: 1.3vw;
+    font-family: Inter-Regular;
+    color: #d72c10;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*contact us page*/
+.thankyou_message {
+    display: none;
+    border: 8px solid gray;
+    border-radius: 40px;
+    width: 40%;
+    padding: 0px 20px 40px;
+}
+
+.gform label
+{
+    font-size: 1.2vw;
+    font-family: Inter-Regular;
+    width: 12%;
+    display: flex;
+    align-items: center;
+}
+.name-section,.email-section,.mobile-section,.city-section,.message-section
+{
+    margin: 8px 0px;
+    display: flex;
+}
+.gform input, .gform textarea {
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 8px 0px;
+    border: 1px solid #707070;
+    width: 28%;
+}
+.select-wraper.contact-city
+{
+    width: 28%;
+}
+.select-wraper.contact-city select
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.button-section {
+    width: 50%;
+    text-align: center;
+    margin-top: 50px;
+}
+.button-section button {
+    background-color: white !important;
+    padding: 10px 40px;
+    border: 1px solid #707070;
+    border-radius: 25px;
+}
+.loc-country img
+{
+    width: 12%;
+}
+.country-name{
+    text-decoration: none;
+    font-family: 'Inter-Bold';
+    padding: 5px 5px 5px 15px;
+    font-size: 1.1vw;
+    border-radius: 3px;
+    color: #464646;
+}
+.loc-detail span
+{
+    font-family: Inter-Regular;
+    font-size: 1.1vw;
+    margin-top: 18px;
+    display: inline-block;
+}
+.office-loc-pak
+{
+    padding: 25px 0px;
+}
+
+/*******************************************************
+********************************************************
+****************MEDIA QUERIES***************************
+********************************************************
+*********************************************************/
+
+/***********************************************************
+*****************MEDIA QUERIES 2561px *************************
+************************************************************/
+
+
+@media screen and (min-width: 2560px)
+{
+    .slider-producr-detail {
+        bottom: 50%;
+    }
+}
+
+
+
+/***********************************************************
+*****************MEDIA QUERIES 1440px *************************
+************************************************************/
+
+
+@media screen and (max-width: 1440px)
+{
+    
+}
+
+/***********************************************************
+*****************MEDIA QUERIES 1024 or 992 for medium devices *************************
+************************************************************/
+
+
+@media screen and (max-width: 1024px) 
+
+{
+    .navbar-nav li a {
+        font-size: 1.6vw;
+    }
+    .breadcrumb ul li a {
+        font-size: 1.8vw;
+    }
+    .product-list .product-head p, .core-values-head p {
+        font-size: 1.8vw;
+    }
+    
+    .product-page-slider
+    {
+        height: 40vh;
+    }
+    .home-page-slider .carousel-inner .carousel-item img 
+    {
+        width: 30vw;
+    }
+    .slider-producr-detail 
+    {
+        left: 48%;
+        bottom: 46%;
+    }
+    .slider-producr-detail h2:nth-child(3) {
+        margin-bottom: 30px;
+        margin-top: -2vh;
+    }
+    .whoweare-content p:nth-child(1),.lubricant-content .lubricant-head,.deals-offers .deals-offer-head p 
+    {
+        font-size: 3.2vw;
+    }
+    .whoweare-content p:nth-child(2), .lubricant-inner-wraper p,.team-content-wraper .team-member-detail,
+    .core-values-col1 p,.core-values-col2 p,.ceo-regards p
+    {
+        font-size: 1.8vw;
+    }
+    .whoweare-content
+    {
+        padding-right: 20%;
+    }
+    .whoweare-content a, .single-product-wraper .product-packing 
+    {
+        font-size: 1.6vw;
+    }
+    .protection-environment .pretection-inner p {
+        top: 10px;
+    }
+
+    /*product pages*/
+
+    .conent-col 
+    {
+        margin-left: 12px;
+    }
+
+    .conent-col a 
+    {
+        margin-top: 10px;
+    }
+
+
+    /*Single product pages*/
+
+    .single-product-wraper .team-content-wraper 
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .footer-wraper ul li a{
+        font-size: 1.8vw;
+    }
+    .footer-bottom-wraper ul li a {
+        font-size: 1.4vw;
+    }
+    .footer-wraper .footer-head
+    {
+        font-size: 3vw;
+    }
+    .our-team .team-image-wraper img
+    {
+        width: 100%;
+    }
+}
+
+
+/***********************************************************
+*****************MEDIA QUERIES 767 for small devices*************************
+************************************************************/
+
+
+@media screen and (max-width: 850px)
+{
+    .navbar {
+        padding: 1% 2% 0% 2%;
+        z-index: 999;
+    }
+    .navbar-nav li a {
+        padding: 6px 8px !important;
+    }
+    .home-page-slider .carousel-inner .carousel-item img {
+        width: 60%;
+    }
+    .slider-producr-detail 
+    {
+        font-size: 2.5vw;
+    }
+    .slider-producr-detail 
+    {
+        left: 54%;
+        bottom: 48%;
+    }
+    .home-slider-product-name {
+        width: 280px;
+        height: 84px;
+    }
+    .home-slider-product-name span:nth-child(1), .home-slider-product-name span:nth-child(2) {
+        font-size: 2.8vw;
+    }
+    .protection-environment 
+    {
+        margin-top: 30px;
+    }
+    .pretection-inner {
+        padding: 8px 0px;
+    }
+    .protection-environment .pretection-inner p 
+    {
+        right: 5px;
+    }
+    .protection-environment .pretection-inner .accordian1
+    {
+        padding-left: 5px !important;
+        padding-right: 0px !important;
+    }
+    .protection-environment .pretection-inner .accordian2
+    {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .navbar-nav li a
+    {
+        font-size: 2vw;
+    }
+    .product-page-slider {
+        height: 30vh;
+    }
+    .popup .popup__content 
+    {
+        width: 82%;
+        left: 50%;
+    }
+    .conent-col a {
+        padding: 5px 10px 5px 10px;
+        font-size: 1.4vw;
+    }
+    .gform label {
+        font-size: 2.5vw;
+        width: 22%;
+    }
+    .gform input, .gform textarea,.select-wraper.contact-city {
+        width: 50%;
+    }
+    .footer-bottom-wraper ul li a img {
+        width: 4%;
+    }
+    
+    
+}
+
+
+/***********************************************************
+*****************MEDIA QUERIES 767 for small devices*************************
+************************************************************/
+
+
+@media screen and (max-width: 767.5px) 
+
+{
+    .menu-btn
+    {
+        position: fixed;
+    }
+
+    .menu-btn,.wrapper{
+        display: block;
+    }
+    
+     .navbar-collapse   
+    {
+        position: absolute;
+        top: 15vh;
+        background: white;
+        width: 100%;
+        left: 0px;
+    }
+    .navbar-nav
+    {
+        height: 100vh;
+    }
+
+    .home-page-slider .carousel-inner .carousel-item img {
+        width: 46%;
+    }
+    .slider-producr-detail {
+        left: 54%;
+        bottom: 42%;
+    }
+    .breadcrumb ul li a,.breadcrumb ul li+li:before,
+    .product-list .product-head p, .core-values-head p,
+    .product-list .product-head p:nth-child(2)
+    {
+        font-size: 2.2vw;
+    }
+    .whoweare-content p:nth-child(1) {
+        font-size: 3.2vw;
+    }
+    .whoweare-content p:nth-child(2), .lubricant-inner-wraper p {
+        font-size: 1.8vw;
+    }
+    .whoweare-content a, .single-product-wraper .product-packing {
+        font-size: 1.4vw;
+    }
+    .lubricant-inner-wraper .lubricant-content img 
+    {
+        width: 32%;
+    }
+    lubricant-head {
+        font-size: 2.8vw;
+    }
+    .lubricant-inner-wraper p {
+        padding-right: 25px;
+    }
+    .deals-offers .deals-offer-head p,.footer-wraper .footer-head
+    {
+        font-size: 2.6vw;
+    }
+    .footer-wraper ul li a
+    {
+        font-size: 1.8vw;
+    }
+    .footer-bottom-wraper ul li a 
+    {
+        font-size: 1.4vw;
+    }
+
+    /*product page*/
+
+    .product-list-detail 
+    {
+        padding: 8% 6% 6% 6%;
+    }
+
+    .petrol-list .img-col, .Diesel-list .img-col, .bike-list .img-col {
+        width: 30%;
+    }
+
+    
+    .bike-product2,.bike-product3,.gear-product2,.gear-product3,.gear-product4, .gear-product5,.petrol-item2,.petrol-item3, .petrol-item4,
+     .petrol-item5, .petrol-item6,.diesel-item2,.diesel-item3, .diesel-item4, .diesel-item5, .diesel-item6, .diesel-item7, .diesel-item8,
+      .diesel-item9, .diesel-item10 {
+        margin-top: 15%;
+    }
+
+    .conent-col {
+        margin-left: 50px;
+    }
+
+    .conent-col p:nth-child(1) {
+        font-size: 3.4vw;
+    }
+
+    .conent-col p:nth-child(2) {
+        font-size: 5vw;
+    }
+
+    .conent-col p:nth-child(3) {
+        font-size: 2.6vw;
+    }
+
+    .conent-col a 
+    {
+        font-size: 1.5vw;
+    }
+
+     /*Single product pages*/
+
+    .single-product-wraper .team-content-wraper 
+    {
+        padding-left: 30px;
+        padding-right: 0px;
+    }
+    .product-page-slider 
+    {
+        height: 30vh;
+    }
+    .product-details .detail-parg1,.product-details .detail-parg2,.product-details .detail-parg3,.product-details .performance-feature
+    {
+        font-size: 1.8vw;
+    }
+    .product-details ul li,.protection-environment a
+    {
+        font-size: 1.6vw;
+    }
+    .popup .popup__content 
+    {
+        width: 90%;
+        left: 50%;
+    }
+    .breadcrumb {
+        padding-left: 0%;
+    }
+    .breadcrumb ul li+li:before {
+        padding: 2px 0px 2px 0px;
+    }
+    .releated-products-head
+    {
+        margin-bottom: 25px;
+    }
+    /* .releates-products .team-wraper .row  .col-md-6:nth-child(2)
+    {
+        margin-top: 40px !important;
+    } */
+    .our-team .team-image-wraper img 
+    {
+        width: auto;
+    }
+    .our-team .team-image-wraper img 
+    {
+        margin-bottom: 25px;
+    }
+
+    .whoweare 
+    {
+        padding-top: 10%;
+        padding-bottom: 6%;
+    }
+    
+    .whoweare-container,.lubricant-inner-wraper,.deals-slider-container 
+    {
+        padding-bottom: 6%;   
+    }
+    .deals-offer-container
+    {
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+    .footer-bootom-container {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+}
+
+
+
+
+/***********************************************************
+*****************MEDIA QUERIES 425*************************
+************************************************************/
+
+
+@media screen and (max-width: 426px) 
+
+{
+    .home-page-slider .carousel {
+        position: unset !important;
+    }
+    .home-page-slider 
+    {
+        background-size: 100% 45%;
+        width: 100%;
+        height: auto;
+    }
+    .navbar .navbar-brand img {
+        width: 46vw;
+    }
+    .navbar-toggler
+    {
+        position: absolute;
+        right: 15px;
+    }
+
+    /* .home-page-slider .carousel-inner .carousel-item 
+    {
+        text-align: -webkit-auto;
+    } */
+
+     .slider-content-wraper
+    {
+        
+    }
+    .index-slider-image
+    {
+        text-align: -webkit-center;
+        margin: 4% 0px 12% 0px;
+    } 
+    .home-page-slider .carousel-inner .carousel-item img {
+        width: 45%;
+        margin-bottom: 0px;
+    }
+
+    .single-car-slider-image,.single-atf-slider-image,.single-bike-slider-image,.single-diesel-slider-image,.single-gear-slider-image,
+    .single-hydraulic-slider-image {
+        height: 15vh;
+    }
+
+    .carousel-control-prev img,.carousel-control-next img
+    {
+        width: 30%;
+    }
+
+    .carousel-control-prev 
+    {
+        left: 0px;
+    }
+
+    .carousel-control-next {
+        right: 0px;
+    }
+
+    .home-slider-product-name {
+        position: unset !important;
+        height: 68px;
+        width: auto !important;
+    }
+    .home-slider-product-name p {
+        justify-content: end;
+    }
+    
+    .home-slider-product-name span:nth-child(1), .home-slider-product-name span:nth-child(2) {
+        font-size: 4.8vw;
+        padding: 15px 35px;
+        width: auto !important;
+    }
+    .home-page-slider .carousel-indicators 
+    {
+        bottom: 70px;
+    }
+    .petrol-list .img-col, .Diesel-list .img-col, .bike-list .img-col {
+        width: 40%;
+    }
+    .releates-products .single-product {
+        display: unset;
+    }
+    .releates-products.petrol-list .img-col,.releates-products.Diesel-list .img-col,.releates-products.bike-list .img-col,
+    .releates-products .car-related .img-col {
+        width: auto !important;
+    }
+    .releates-products.petrol-list .product-list-detail img,.releates-products.Diesel-list .product-list-detail img,.releates-products.bike-list .img-col img,
+    .releates-products .car-related .img-col img {
+        width: 65% !important;
+    }
+    .releates-products .conent-col {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+
+    .slider-producr-detail {
+        position: unset !important;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .slider-producr-detail p
+    {
+        text-align: center !important;
+    }
+    .slider-producr-detail h1, .slider-producr-detail h2 
+    {
+        font-size: 8vw;
+        text-align: center !important;
+        line-height: 1.3;
+    }
+    .slider-producr-detail h2:nth-child(3) {
+        margin-bottom: 25px;
+        margin-top: -2vh;
+    }
+    .slider-producr-detail p,.slider-producr-detail a,.team-content-wraper .team-member-designation
+    {
+        font-size: 3vw;
+    }
+    .breadcrumb ul li a,.breadcrumb ul li+li:before
+    {
+        font-size: 3vw !important;
+    }
+    .product-list .product-head p, .core-values-head p,.product-head p:nth-child(2)
+    {
+        font-size: 5.2vw !important;
+    }
+
+    .product-head
+    {
+        padding-left: 6%;
+    }
+
+    .whoweare-content p:nth-child(1),.lubricant-content .lubricant-head,.deals-offers .deals-offer-head p
+     {
+        font-size: 6vw;
+    }
+    .rtx-logo-wraper
+    {
+        text-align: center;
+    }
+    .rtx-logo-wraper img {
+        width: 76%;
+    }
+    .whoweare {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+    /* .whoweare-container, .lubricant-inner-wraper, .deals-slider-container {
+        padding-bottom: 15%;
+    } */
+    
+    .whoweare-content {
+        padding-top: 15%;
+        padding-right: 0px;
+    }
+
+    .product-type {
+        font-size: 4.5vw;
+    }
+    .new-deals-wraper {
+        display:block;
+    }
+    .see-all-btn
+    {
+        text-align: end;
+    }
+
+    .whoweare-content a, .single-product-wraper .product-packing,.single-product-wraper .germen-tech-wraper p,.product-specification,
+    .protection-environment a,.conent-col a,.see-all-btn a
+     {
+        font-size: 3vw;
+    }
+
+    .whoweare-content p:nth-child(2), .lubricant-inner-wraper p,
+    .team-content-wraper .team-member-detail,.core-values-col1 p,.core-values-col2 p,.ceo-regards p {
+        font-size: 5.4vw;
+    }
+    .core-values-col2 {
+        padding-left: 0px;
+        margin-top: 15px;
+    }
+    
+    .footer-wraper .footer-head
+    {
+        font-size: 3.5vw;
+    }
+    .footer-wraper .footer-head,.releated-products-head,.slick-slider-wraper2 a
+    {
+        font-size: 3.5vw;
+    }
+
+    .footer-wraper ul li a {
+        font-size: 3.4vw;
+    }
+
+    .footer-list-wraper .list-single:nth-child(2) ul, .footer-wraper .list-single:nth-child(3) ul {
+        margin-left: 5px;
+    }
+
+    .footer-bottom-wraper ul li {
+        display: inline-block;
+        margin: 0px 20px 0px 0px;
+    }
+
+    .footer-bottom-wraper ul li a {
+        font-size: 4.2vw;
+    }
+
+    /*single product pages*/
+
+    .product-page-slider {
+        height: 18vh;
+    }
+
+    .product-details .detail-parg1,.product-details .detail-parg2,.product-details .detail-parg3,.product-details .performance-feature,
+    .card-body p
+    {
+        font-size: 3.8vw;
+    }
+
+    .single-bike-slider-image 
+    {
+        height: 15vh;
+    }
+
+    .product-details ul li 
+    {
+        font-size: 3.6vw;
+    }
+
+    .conent-col p:nth-child(1) 
+    {
+        font-size: 5vw;
+    }
+
+    .conent-col p:nth-child(2) 
+    {
+        font-size: 8vw;
+    }
+
+    .conent-col p:nth-child(3) 
+    {
+        font-size: 5.2vw;
+    }
+
+    .conent-col a
+    {
+        padding: 6px 10px 6px 12px;
+        margin-top: 8px;
+    }
+
+    .conent-col 
+    {
+        margin-left: 18px;
+    }
+
+    .single-product-wraper .team-content-wraper .team-member-designation 
+    {
+        font-size: 5.5vw;
+    }
+
+    .team-content-wraper .team-member-name 
+    {
+        font-size: 6.8vw;
+    }
+    
+    .single-product-wraper .product-packing {
+        font-family: Inter-Regular;
+        padding: 12px 24px 9px 10px;
+    }
+
+    .team-row1 {
+        padding-bottom: 8%;
+    }
+    
+    
+
+
+    .product-specification 
+    {
+        margin-top: 8px;
+    }
+
+    .team-row2, .team-row3 {
+        padding-bottom: 8%;
+        padding-top: 8%;
+    }
+
+    /*product page*/
+    .product-slider-image,.bike-slider-image,.cars-slider-image,.diesel-slider-image,.hydraulic-slider-image,.gear-slider-image,.atf-slider-image
+    {
+        height: 15vh;
+    }
+    .lubricant-inner-wraper {
+        padding-left: 0%;
+    }
+    .deals-offer-container .deals-offer-row
+    {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .breadcrumb-container  .col-md-12
+    {
+        padding: 0px !important;
+    }
+    .single-product-wraper .team-content-wraper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .form-elements
+    {
+        padding: 0% 8%;
+    }
+    .gform label {
+        font-size: 3.5vw;
+        width: 30%;
+    }
+    .gform input, .gform textarea, .select-wraper.contact-city {
+        width: 65%;
+    }
+    .button-section {
+        width: 100%;
+    }
+
+    .footer-bottom-wraper ul li a img {
+        width: 8%;
+    }
+
+    .product-head {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .footer-bootom-container {
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+
+}
+
+/***********************************************************
+*****************MEDIA QUERIES 390*************************
+************************************************************/
+
+
+@media screen and (max-width: 392px)
+{
+    .home-page-slider .carousel-inner .carousel-item img {
+        width: 45%;
+    }
+}
+
+/***********************************************************
+*****************MEDIA QUERIES 376*************************
+************************************************************/
+
+
+@media screen and (max-width: 376px)
+{
+    
+    .home-page-slider .carousel-inner .carousel-item img {
+        width: 50%;
+        margin-left: 0px;
+    }
+    .index-slider-image
+    {
+        text-align: -webkit-center;
+    }
+    /*single product pages*/
+    
+    
+    .product-page-slider 
+    {
+        height: 12vh;
+    }
+
+    .pretection-inner 
+    {
+        padding: 8px 0px;
+    }
+
+    .protection-environment a
+    {
+        padding: 0px 6px;
+    }
+
+    .petrol-list .img-col, .Diesel-list .img-col, .bike-list .img-col {
+        width: 45%;
+    }
+    .wrapper
+    {
+        top: -10px;
+    }
+
+
+}
+
+/***********************************************************
+*****************MEDIA QUERIES 360*************************
+************************************************************/
+@media screen and (max-width: 360px)
+{
+    
+    .home-page-slider .carousel-inner .carousel-item img {
+        width: 65%;
+        margin-left: 0px;
+    }
+    .slider-producr-detail {
+        left: 50%;
+    }
+}
+
+/***********************************************************
+*****************MEDIA QUERIES 330*************************
+************************************************************/
+
+
+@media screen and (max-width: 330px)
+{
+    .home-page-slider .carousel-inner .carousel-item img
+    {
+        width: 65%;
+    }
+    .product-page-slider {
+        height: 12vh;
+    }
+    .product-list-detail {
+        padding: 8% 0% 6% 0%;
+    }
+    .slider-producr-detail {
+        left: 50%;
+    }
+}
+
+
+
+/*fadein up animation*/
+.bounce-up .subject {
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+.bounce-up.in-view .subject {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
